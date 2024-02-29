@@ -1,0 +1,32 @@
+type Query {
+    productCollection: ProductCollection @resolver(class: "Capilex\\Catalog\\Model\\Resolver\\ProductsResolver") @doc(description: "Get Product collection of a store")
+}
+
+type ProductCollection @doc(description: "product collection comment") {
+    allProducts: [ProductRecord] @doc(description: "Product records with info")
+}
+
+type ProductRecord {
+    product_count: String @doc(description: "Get Product product_count") 
+    name: String @doc(description: "Get Product name")
+    sku: String @doc(description: "Get Product sku")
+    price: String @doc(description: "Get Product price")
+    description: String @doc(description: "Get Product description")
+    short_description: String @doc(description: "Get Product short_description")
+    weight: String @doc(description: "Get Product weight")
+    status: String @doc(description: "Get Product status")
+    visibility: String @doc(description: "Get Product visibility")
+    tax_class: String @doc(description: "Get Product tax_class")
+    quantity: String @doc(description: "Get Product quantity")
+    stock_availability: String @doc(description: "Get Product stock_availability")
+    categories: String @doc(description: "Get Product categories")
+    attribute_set: String @doc(description: "Get Product attribute")
+    meta_title: String @doc(description: "Get Product meta_title")
+    meta_description: String @doc(description: "Get Product meta_description")
+    url_key: String @doc(description: "Get Product url_key")
+    manufacturer: String @doc(description: "Get Product manufacturer")
+    country_of_manufacture: String @doc(description: "Get Product country_of_manufacture")
+    customizable_options: String @doc(description: "Get Product customizable_options")
+    ogasys_image: String @doc(description: "Get Product ogasys_image")
+    categories : [String] @doc(description: "Get Product categories")
+}
